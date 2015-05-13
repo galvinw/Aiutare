@@ -1,10 +1,5 @@
 <ion-view view-title="timeline">
     <ion-header-bar class="bar bar-header bar-assertive">
-<!--       <button class="button button-icon" ng-click="toggleProjects()">
-        <i class="icon ion-navicon"></i>
-      </button> -->
-      <h1 class="title">{{activeProject.title}}</h1>
-      <!-- New Task button-->
       <button class="button button-icon" ng-click="newTask()">
         <i class="icon ion-compose"></i>
       </button>
@@ -13,20 +8,38 @@
     <ion-content has-bouncing="true">
     <timeline>
       <timeline-node side="right">
-        <timeline-badge class="info"><i class="glyphicon glyphicon-check"></i>
+        <timeline-badge class="info"><i class="icon ion-document-text"></i>
         </timeline-badge>
         <timeline-panel>
           <timeline-heading>
-            <timeline-title>Some twitter post</timeline-title>
+            <timeline-title>Introduction</timeline-title>
             <p>
-              <small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small>
+              <small class="text-muted"><i class="icon ion-clock"></i> 8 days ago</small>
             </p>
           </timeline-heading>
           <timeline-content>
-            <p>Twitter post goes here</p>
+            <p>When did you get here?</p>
+            <p>Where are you parents?</p>
           </timeline-content>
         </timeline-panel>
       </timeline-node>
+
+      <timeline-node side="right">
+        <timeline-badge class="warning"><i class="icon ion-camera"></i>
+        </timeline-badge>
+        <timeline-panel>
+          <timeline-heading>
+            <timeline-title>Chess!</timeline-title>
+            <p>
+              <small class="text-muted"><i class="icon ion-clock"></i> 11 days ago</small>
+            </p>
+          </timeline-heading>
+          <timeline-content>
+            <img src="img/chess.jpg">
+          </timeline-content>
+        </timeline-panel>
+      </timeline-node>
+
     </timeline>
      <!--  <ion-list>
         <ion-item ng-repeat="task in activeProject.tasks">

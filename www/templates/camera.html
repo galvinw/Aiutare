@@ -1,10 +1,18 @@
 <ion-view title="Camera">
     <ion-content >
+
       <label class="item">
             <button class="button button-icon icon ion-camera" ng-click="takePicture()"></button>
-      </label>
-      <label class="item">
             <button class="button button-icon icon ion-ios-recording" ng-click="takeAudio()"></button>
+            <button class="button button-icon icon ion-videocamera" ng-click="takePicture())"></button>
+
       </label>
+        <div class="row" ng-repeat="image in images" >
+            <div class="col" ng-if="$index < images.length">
+                <img ng-src="data:image/jpeg;base64,{{images[$index].image}}" width="100%" />
+            </div>
+        </div>
+
+
     </ion-content>
 </ion-view>

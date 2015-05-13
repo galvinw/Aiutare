@@ -1,7 +1,7 @@
 {
-  "name": "todo",
+  "name": "Aiutare",
   "version": "1.0.0",
-  "description": "todo: An Ionic project",
+  "description": "Aiutare: Connect to the sharing economy",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

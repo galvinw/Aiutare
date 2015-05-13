@@ -1,24 +1,13 @@
-var fb = new Firebase("https://amber-torch-8503.firebaseio.com/");
 var AmongApp = angular.module('poorau', ['ionic', 'angular-timeline', 'ngCordova', "firebase", 'poorau.controllers']);
-/**
- * The Projects factory handles saving and loading projects
- * from local storage, and also lets us save and load the
- * last active project index.
- */
-// AmongApp.factory('Camera', function($q) {
-//   return {
-//       getPicture: function(options) {
-//         var q = $q.defer();
-//         navigator.camera.getPicture(function(result) {
-//           // Do any magic you need
-//           q.resolve(result);
-//         }, function(err) {
-//           q.reject(err);
-//         }, options);
-//         return q.promise;
-//       }
-//   }
-// });
+var fb = new Firebase("https://amber-torch-8503.firebaseio.com/Packages/");
+var auth = '';
+var imagesdebug = [];
+var mylong = '';
+var mylat = '';
+var PackageArray =[];
+var imageData = '';
+
+
 
 AmongApp.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -33,6 +22,10 @@ AmongApp.run(function ($ionicPlatform) {
     }
   });
 });
+
+
+
+
 
 AmongApp.config(function($stateProvider, $urlRouterProvider) {
   
@@ -88,7 +81,7 @@ AmongApp.config(function($stateProvider, $urlRouterProvider) {
     views: {
         'menuContent' :{
             templateUrl: "templates/home.html",
-       //     controller: "HomeCtrl"
+            controller: "HomeCtrl"
         }
     }
   })

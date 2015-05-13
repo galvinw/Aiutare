@@ -1,6 +1,6 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="bar-calm">
       <ion-nav-back-button>
       </ion-nav-back-button>
 
@@ -24,31 +24,30 @@
         <ion-item nav-clear menu-close href="#/app/home">
           Home
         </ion-item>
-        
-        <ion-item nav-clear menu-close href="#/app/timeline">
+<!--         
+        <ion-item nav-clear menu-close href="#/app/timeline" ng-show="loggedin";>
           Timeline
         </ion-item>
 
-        <ion-item nav-clear menu-close href="#/app/camera">
+        <ion-item nav-clear menu-close href="#/app/camera" ng-show="loggedin">
           Camera
         </ion-item>
 
-
-        <ion-item nav-clear menu-close href="#/app/friendprofile">
+        <ion-item nav-clear menu-close href="#/app/friendprofile" ng-show="loggedin">
           Friend Profile
         </ion-item>
-
-
-        <ion-item nav-clear menu-close href="#/app/profile">
+ -->
+        <ion-item nav-clear menu-close href="#/app/profile" ng-show="loggedin">
           My Profile
         </ion-item>
-
-      </ion-list>
-      <label class="item">
-            <button class="button button-block button-positive" ng-click="fbLogin()">
+      <label class="item" ng-show="!loggedin">
+            <button class="button button-block button-calm" ng-click="fbLogin()" >
                 Login with Facebook
             </button>
       </label>
+
+      </ion-list>
+
 
     </ion-content>
   </ion-side-menu>

@@ -1,0 +1,49 @@
+<div class="modal">
+  <ion-header-bar class="bar bar-header bar-calm">
+	    <h1 class="title">Add an initiative</h1>
+	    <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+  </ion-header-bar>
+  <ion-content has-header="true">
+  		    <form name="AddCompany" ng-submit="submit(init)" novalidate>
+		        <div class="form-group">
+					  <div class="item item-input-inset">
+					    <label class="item-input-wrapper">
+					      <input type="text" name="companyname" placeholder="Company Name" ng-model="init.companyname" required>
+					    </label>
+					  </div>
+					  <div class="item item-input-inset">
+					    <label class="item-input-wrapper">
+					      <input type="text" placeholder="Email" ng-model="init.email">
+					    </label>
+					  </div>
+					  <div class="item item-input-inset">
+					    <label class="item-input-wrapper">
+					      <input type="text" placeholder="Phone number" ng-model="init.phone">
+					    </label>
+					</div>
+					 <center>
+					<div class="item item-input-inset">					      
+					    	<div style="width:47%;float:left">
+ 								<input class="item-input-wrapper" style="width:100%;padding-right: 0px;padding-left: 5px" type="text" placeholder="Lat" ng-model="init.lat">
+					    	</div>
+					    	<div style="width:47%;float:right;margin-left: 10px">
+				    			<input class="item-input-wrapper" style="width:100%;padding-right: 0px;padding-left: 5px" type="text" placeholder="Long" ng-model="init.long">
+					    	</div>
+					  </div>
+			                <div class="button button-clear button-small" ng-click="gethere()"> 
+			               	 	<i class="icon ion-navigate"></i><div class="instructions">Get current location</div> 
+
+			                </div>
+			                <div class="button button-clear button-small" ng-click="uploadpic()"> 
+			               	 	<i class="icon ion-upload" ng-click="uploadpic()"></i><div class="instructions">Tap to upload photo</div> 
+			                </div>
+		                </center>
+				  
+
+		        </div>
+
+              <button type="submit" class="button button-outline button-full button-stable button-small" >Submit</button>
+
+		    </form>
+  </ion-content>
+</div>

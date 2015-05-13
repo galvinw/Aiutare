@@ -1,24 +1,27 @@
-<ion-view view-title="Home">
-    <ion-header-bar class="bar-assertive">
-      <button class="button button-icon" ng-click="toggleProjects()">
-        <i class="icon ion-navicon"></i>
-      </button>
-      <h1 class="title">{{activeProject.title}}</h1>
-      <!-- New Task button-->
-      <!-- <button class="button button-icon" ng-click="newTask()"> -->
-        <i class="icon ion-compose"></i>
-      </button>
-    </ion-header-bar> 
-    <ion-content has-bouncing="true">
-      <div class="bigpicture">
-          <div class="list card">      
-            <div class="item item-image">
-              <img src="1musician.jpg">
-              <p class="p_title">Tobias "Marley" Roberts</p> 
-              <p class="p_subtitle">0.1m</p>
-            </div>
-          </div>
-      </div>
+<ion-view view-title="Aiutare">
+<!--     <ion-header-bar class="bar-calm">
 
+    </ion-header-bar>  -->
+    <ion-content has-bouncing="false">
+      <ion-refresher 
+        pulling-text="Pull to refresh.!?."
+        on-refresh="doRefresh()">
+      </ion-refresher>
+
+      <div class="bigpicture">
+            <div class="item item-image" ng-repeat="package in packages">
+              
+                  <img ng-src="data:image/jpeg;base64,{{package.image}}" onload="resizeImg(this)">
+                  <p class="p_title" style="color:white">{{package.name}}</p> 
+                  <p class="p_subtitle" style="color:white"></p>
+    
+            </div>  
+      </div>
     </ion-content>
+      <div class="absolutebutton" ng-hide="auth==''">
+        <button class=" button button-icon icon ion-plus-circled buttonshading" style="color:cyan"  ng-click="modal.show()" ng-hide="auth==''">
+        </button>
+      </div>
   </ion-view>
+
+
