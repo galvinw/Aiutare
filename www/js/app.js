@@ -6,7 +6,7 @@ var mylong = '';
 var mylat = '';
 var PackageArray =[];
 var imageData = '';
-
+var ABX = null;
 
 
 AmongApp.run(function ($ionicPlatform) {

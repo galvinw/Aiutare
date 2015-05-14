@@ -71,14 +71,23 @@ angular.module('poorau.controllers')
 
 
      $scope.uploadpic = function(){
-        // var img = document.createElement("img");
-        // img.src = "cover.jpg";
-        // //       var results = img;
-        //     imageData = convertpicture(img);
+       //  ABX = document.createElement("img");
+       //  // img.src = "cover.jpg";
+       // setTimeout(function(){
+       //    ABX.src = "cover.jpg";
+       //    setTimeout(function(){
+                 
+       //           getImageDataURL(ABX, function (data) {
+       //           imageData = data;
+       //           console.log(data);
+       //           });
+       //         },4000);
 
-        //       imageData = convertpicture(results);
-        //       $scope.newcompany.image = imageData;
-        //       console.log(results);
+
+
+       // },2000);
+
+       
 
           // getImageDataURL(img, function (data) {
           //       imageData = data;
@@ -91,11 +100,17 @@ angular.module('poorau.controllers')
           .then(function (results) {
             //  imageData = convertpicture(results[0]);
             var img = document.createElement("img");
-                     img.src = results[0];
-                getImageDataURL(img, function (data) {
-                imageData = data;
-                console.log(data);
-            });
+             setTimeout(function(){
+           img.src = results[0];
+              setTimeout( function(){
+                 getImageDataURL(img, function (data) {
+                 imageData = data;
+                 console.log(data);
+                 });
+              },5000)
+            },4000)
+
+            
           }, function(error) {
             // error getting photos
              console.log("Error:", err);
